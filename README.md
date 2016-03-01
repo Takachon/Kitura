@@ -36,9 +36,11 @@ Kitura is a web framework and web server that is created for web services writte
 
 4. From within the Docker container, execute the `ci.sh` script to build Kitura and execute the test cases:
 
-  `source /root/ci.sh`
+  `/root/ci.sh`
 
-  The last output line from executing the `ci.sh` script should be similar to `>> Build and execution of test cases completed (see above for results).`
+  The last output line from executing the `ci.sh` script should be similar to:
+
+  `>> Build and execution of test cases completed (see above for results).`
 
 5. You can now run the KituraSample executable inside the Docker container:
 
@@ -108,7 +110,7 @@ Kitura is a web framework and web server that is created for web services writte
 
 4. Build and install the libdispatch library:
 
- Please note that the complete instructions for building and installing this library are found [here](https://github.com/apple/swift-corelibs-libdispatch/blob/master/INSTALL). Though, all you need to do is just this: `cd swift-corelibs-libdispatch && git submodule init && git submodule update && sh ./autogen.sh && ./configure --with-swift-toolchain=<path-to-swift>/usr --prefix=<path-to-swift>/usr && make && sudo make install`
+ Please note that the complete instructions for building and installing this library are found [here](https://github.com/apple/swift-corelibs-libdispatch/blob/master/INSTALL). Though, all you need to do is just this: `cd swift-corelibs-libdispatch && git submodule init && git submodule update && sh ./autogen.sh && ./configure --with-swift-toolchain=<path-to-swift>/usr --prefix=<path-to-swift>/usr && make && make install`
 
 5. Compile and install PCRE2:
 
@@ -180,7 +182,7 @@ swift build
 5) Copy the Makefile.client from KituraNet to your project as Makefile:
 
 ```bash
-cp Packages/Kitura-net-0.2.0/Makefile-client Makefile
+cp Packages/Kitura-net-0.3.0/Makefile-client Makefile
 ```
 
 6) Import the modules in your code:
